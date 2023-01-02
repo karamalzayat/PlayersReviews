@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".landing.show.ShowAllPlayersActivity">
+
+    <data>
+
+        <variable
+            name="showAllPlayersViewModel"
+            type="com.example.playersreviewsapplication.landing.show.ShowAllPlayersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_white">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/players_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_margin="@dimen/dimen_dp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/player_recycler_item" />
+
+        <ProgressBar
+            android:id="@+id/show_players_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/show_players_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="@{() -> showAllPlayersViewModel.reload()}"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/dimen_dp_16"
+            android:paddingTop="@dimen/dimen_dp_8"
+            android:paddingEnd="@dimen/dimen_dp_16"
+            android:paddingBottom="@dimen/dimen_dp_8"
+            android:text="@string/reload"
+            android:drawablePadding="@dimen/dimen_dp_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_sp_22"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableStartCompat="@drawable/svg_reload" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

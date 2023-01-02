@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Players Reviews Application</string>
+    <string name="player_name">Player Name</string>
+    <string name="player_brief">Legendary Romanian gymnast Nadia Comăneci captured four Olympic gold medals during her professional career. In 1976, she won the gold in three separate events: balance beam, uneven bars and general competition. In 1980, she added two more gold medals to her collection for the balance beam and floor exercise. Comăneci was also the first female athlete to ever score a perfect 10 in an Olympic gymnastics events. In 2000,the Laureus World Sports Academy named her one of the Athletes of the Century. Here, a 14-year-old Comăneci competes on the uneven bars at the 1976 Olympic Games in Montreal. This is the performance that earned her that historic perfect score.</string>
+    <string name="reload">Reload</string>
+
+</resources>
